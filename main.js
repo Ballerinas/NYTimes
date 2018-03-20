@@ -6,3 +6,4 @@
 
 // listeners: 
 // 1. onClick for Search button 
+// 2. onClick for Clear button
