@@ -9,24 +9,28 @@
 // 1. onClick for Search button 
 // 2. onClick for Clear button
 
+function buildURL(){
+
 let apiKey = "c0472e9778e24819951ef447805c93c1";
-let queryBase = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}&q=`;
+let queryURL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=${apiKey}&q=`;
 let searchText = $('#searchtext').val().trim();
-let startYear = $('#TEXT INPUT BOX ID').val().trim();
-let endYear = $('#TEXT INPUT BOX ID').val().trim();
+let startYear = $('#startyear').val().trim();
+let endYear = $('#endyear').val().trim();
 
 //append search text to the query string
-queryBase += searchText;
+queryURL += searchText;
 
 // if there is a start Year, append it to the query string
 if (parseInt(startYear)){
-    queryBase += `&begin_date=${startYear}0101`;
+    queryURL += `&begin_date=${startYear}0101`;
 }
 
 // if there is an end year, append it to the query string
 if (parseInt(endYear)){
-    queryBase += `&end_date=${endYear}0101`;
+    queryURL += `&end_date=${endYear}0101`;
 }
 
+return queryURL;
+console.log(`Query URL is now ${queryURL}`)
 
-
+}
