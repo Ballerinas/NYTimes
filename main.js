@@ -5,7 +5,7 @@
 // 2. make the API call, format and display the response 
 // 3. clear the results 
 
-// listeners: 
+// document ready + listeners: 
 // 1. onClick for Search button 
 // 2. onClick for Clear button
 
