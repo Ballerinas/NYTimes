@@ -9,3 +9,5 @@
 // 1. onClick for Search button 
 // 2. onClick for Clear button
 
+let queryBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=c0472e9778e24819951ef447805c93c1"
+
