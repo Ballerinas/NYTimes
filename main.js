@@ -34,10 +34,34 @@ return queryURL;
 
 }
 
+function clear() {
+    $("#well-section").empty();
+    console.log("clear function executed well-section dumped");
+  }
+
+$( document ).ready(function(){
+    $('#run-search').click(function(event){
+        event.preventDefault();
+        console.log("search clicked");
+        let queryURL = buildURL();
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+          }).then(updatePage);
+        });
+
+    $('#clear-all').click(function(event){
+        event.preventDefault();
+        console.log("clear clicked");
+        clear();
+    });
+});
+
 function updatePage(NYTData) {
     // get from the form the number of results to display
     // api doesn't have a "limit" parameter, so we have to do this ourselves
-    var numArticles = $("#article-count").val();
+    var numArticles = $("#num-records-select").val();
+    console.log(numArticles);
   
     // log the NYTData to console, where it will show up as an object
     console.log(NYTData);
@@ -102,17 +126,4 @@ function updatePage(NYTData) {
       );
       console.log(article.web_url);
     }
-  }
-
-function clear() {
-    $("#well-section").empty();
-  }
-
-$( document ).ready(function(){
-    $('#run-search').click(function(event){
-        event.preventDefault();
-        console.log("search clicked");
-        buildURL();
-    });
-});
-
+  } 
