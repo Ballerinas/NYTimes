@@ -12,8 +12,20 @@
 let queryBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=c0472e9778e24819951ef447805c93c1&q=";
 let searchText = $('#searchtext').val().trim();
 let numArticles = $('#dropdown').val().parseInt();
-let startYear = $('#TEXT INPUT BOX ID').trim().val().parseInt();
-let endYear = $('#TEXT INPUT BOX ID').trim().val().parseInt();
+let startYear = $('#TEXT INPUT BOX ID').trim().val()
+let endYear = $('#TEXT INPUT BOX ID').trim().val()
+
+//append search text
+
+//append number of articles
+
+if (parseInt(startYear)){
+    queryBase += `&begin_date=${startYear}0101`;
+}
+
+if (parseInt(endYear)){
+    queryBase += `&end_date=${endYear}0101`;
+}
 
 
 
