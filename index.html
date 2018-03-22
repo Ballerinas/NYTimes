@@ -2,19 +2,15 @@
 <html>
 
 <head>
-    <!--test comment-->
     <!-- metas -->
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 
-    <title>New York Time Search</title>
+    <title>Ballerinas TUTU News</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
     <link rel="icon" type="image/png" href="favicon.ico">
 
@@ -35,64 +31,80 @@
         <nav></nav>
     </header>
     <main>
-        <div class="row">
-            <div class="col-sm-12">
-                <br>
-                <!-- First panel is for handling the search parameters -->
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">
-                            <strong>
-                                <i class="fa  fa-list-alt"></i> Search Parameters</strong>
-                        </h3>
+        <div class="container">
+            <div class="jumbotron" style="background-color: white; color: #fad2ca; border-radius: 10px">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="./images/logo.png" alt="Mountain View" style="width: 234px; height: 203px;">
                     </div>
-                    <div class="panel-body">
+                    <div class"=col-md-8">
+                            <h1 class="NY" style="text-align:center;">
+                                <strong>All Things Saute</strong>
+                            </h1>
+                            <h2 style="text-align: center; color: rgb(0, 0, 0);"> News API from Group 2</h2>
+                    </div>
+                </div>            
+            </div>
 
-                        <!-- Here we create an HTML Form for handling the inputs-->
-                        <form role="form">
 
-                            <!-- Here we create the text box for capturing the search term-->
-                            <div class="form-group">
-                                <label for="search">Search Term:</label>
-                                <input type="text" class="form-control" id="search-term">
-                            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <br>
+                    <!-- First panel is for handling the search parameters -->
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">
+                                <strong>
+                                    <i class="fa  fa-list-alt"></i> Search Parameters</strong>
+                            </h3>
+                        </div>
+                        <div class="panel-body">
 
-                            <!-- Here we capture the number of records that the user wants to retrieve  -->
-                            <div class="form-group">
-                                <label for="pwd">Number of Records to Retrieve:</label>
-                                <select class="form-control" id="num-records-select">
-                                    <option value="1">1</option>
-                                    <!-- Setting the option for 5 as default -->
-                                    <option value="5" selected="">5</option>
-                                    <option value="10">10</option>
-                                </select>
-                            </div>
+                            <!-- Here we create an HTML Form for handling the inputs-->
+                            <form role="form">
 
-                            <!-- Here we capture the Start Year Parameter-->
-                            <div class="form-group">
-                                <label for="start-year">Start Year (Optional):</label>
-                                <input type="text" class="form-control" id="start-year">
-                            </div>
+                                <!-- Here we create the text box for capturing the search term-->
+                                <div class="form-group">
+                                    <label for="search">Search Term:</label>
+                                    <input type="text" class="form-control" id="search-term">
+                                </div>
 
-                            <!-- Here we capture the End Year Parameter -->
-                            <div class="form-group">
-                                <label for="end-year">End Year (Optional):</label>
-                                <input type="text" class="form-control" id="end-year">
-                            </div>
+                                <!-- Here we capture the number of records that the user wants to retrieve  -->
+                                <div class="form-group">
+                                    <label for="pwd">Number of Records to Retrieve:</label>
+                                    <select class="form-control" id="num-records-select">
+                                        <option value="1">1</option>
+                                        <!-- Setting the option for 5 as default -->
+                                        <option value="5" selected="">5</option>
+                                        <option value="10">10</option>
+                                    </select>
+                                </div>
 
-                            <!-- Here we have our final submit button -->
-                            <button type="submit" class="btn btn-default" id="run-search">
-                                <i class="fa fa-search"></i> Search</button>
-                            <button type="button" class="btn btn-default" id="clear-all">
-                                <i class="fa fa-trash"></i> Clear Results</button>
+                                <!-- Here we capture the Start Year Parameter-->
+                                <div class="form-group">
+                                    <label for="start-year">Start Year (Optional):</label>
+                                    <input type="text" class="form-control" id="start-year">
+                                </div>
 
-                        </form>
-                        <div id="well-section"></div>
+                                <!-- Here we capture the End Year Parameter -->
+                                <div class="form-group">
+                                    <label for="end-year">End Year (Optional):</label>
+                                    <input type="text" class="form-control" id="end-year">
+                                </div>
+
+                                <!-- Here we have our final submit button -->
+                                <button type="submit" class="btn btn-default" id="run-search">
+                                    <i class="fa fa-search"></i> Search</button>
+                                <button type="button" class="btn btn-default" id="clear-all">
+                                    <i class="fa fa-trash"></i> Clear Results</button>
+
+                            </form>
+                            <div id="well-section"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
     </main>
     <footer></footer>
     <!-- Script CDNs -->
